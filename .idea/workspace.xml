@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53669fea-18c4-4806-b45a-ff4de89ef7f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/MyContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/b.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <updated>1564276591266</updated>
       <workItem from="1564276592681" duration="3950000" />
       <workItem from="1564286723672" duration="4612000" />
-      <workItem from="1564295436671" duration="5714000" />
+      <workItem from="1564295436671" duration="6752000" />
     </task>
     <servers />
   </component>
