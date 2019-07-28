@@ -1,4 +1,5 @@
-import React, { useReducer } from 'react'
+import React, {useReducer, useCallback, useContext, useRef} from 'react'
+import myContext from '../components/MyContext';
 
 function counterReducer(state, action) {
   switch (action.type) {
@@ -11,12 +12,17 @@ function counterReducer(state, action) {
 
 const Home = () => {
   const [count, dispatchCount] = useReducer(counterReducer, 0);
+  const context = useContext(myContext);
+  const ref = useRef(null);
 
   function add() {
     dispatchCount({ type: 'add' })
   }
   return (
-    <div onClick={add}>{count}</div>
+    <>
+      <div onClick={add} ref={ref}>{count}</div>
+      <p>{context}</p>
+    </>
   )
 };
 
