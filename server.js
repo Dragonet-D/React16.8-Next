@@ -2,13 +2,26 @@ const koa = require('koa');
 const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = new next({ dev });
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
+// app.prepare().then(() => {
   const server = new koa();
   server.use(async (ctx, next) => {
-    await handle(ctx.req, ctx.res);
-    ctx.respond = false;
+    const {path, method} = ctx;
+    // next 调用下个中间件
+    ctx.body = `<span>Koa Render ${method} ${path}</span>`;
+    // await next()
   });
-});
+
+  server.use(async (ctx, next) => {
+    ctx.body = '<span>Koa Render2</span>'
+  });
+  // server.use(async (ctx, next) => {
+  //   await handle(ctx.req, ctx.res);
+  //   ctx.respond = false;
+  // });
+  server.listen(3000, () => {
+    console.log('koa server listening on 3000');
+  });
+// });
